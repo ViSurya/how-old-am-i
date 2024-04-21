@@ -1,28 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>How old am I? - Age Calculator</title>
-    <meta name="description"
-        content="This tool helps you calculate your age in a detailed and comprehensive manner. Simply enter your date of birth, and you'll get a breakdown of your age, including years, months, days, and even your age in seconds, minutes, hours, and on different planets.">
-    <link rel="stylesheet" href="/static/styles/app.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How old am I? - Age Calculator</title>
+  <meta name="description"
+    content="This tool helps you calculate your age in a detailed and comprehensive manner. Simply enter your date of birth, and you'll get a breakdown of your age, including years, months, days, and even your age in seconds, minutes, hours, and on different planets.">
+  <link rel="stylesheet" href="/static/styles/app.css">
 
 
 </head>
 
 <body>
+  <header>
+    <nav class="container-fluid">
+      <ul class="logo">
+        <li><strong>Acme Corp</strong></li>
+      </ul>
+      <ul class="navbar-links">
+        <li><a href="#" class="contrast">Home</a></li>
+        <li><a href="#" class="contrast">About</a></li>
+        <li><a href="#" class="contrast">Services</a></li>
+        <li><a href="#" class="contrast">Products</a></li>
+        <li><a href="#" class="contrast">Contact</a></li>
+        <span class="close-btn" onclick="toggleMenu()">&times;</span>
+      </ul>
+      <div class="navbar-controls">
+        <div class="dark-mode-toggle" onclick="toggleDarkMode()">
+          <img id="sunIcon" src="./static/images/sun.svg" alt="light mode sun svg" style="display: none;">
+          <img id="moonIcon" src="./static/images/moon.svg" alt="light mode moon svg" style="display: none;">
+        </div>
 
-<!-- root id is important very much -->
-    <main class="container" id="root">
+        <span class="navbar-toggle" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </div>
+    </nav>
+  </header>
+  <!-- root id is important very much -->
+  <main class="container" id="root">
 
-    </main>
+  </main>
 
 
 
-
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>

@@ -72,6 +72,7 @@
   }
 }
 
+
 a {
   --pico-text-decoration: underline;
 }
@@ -227,6 +228,7 @@ details summary[role=button]:not(.outline)::after {
 [data-theme=light],
 :root:not([data-theme=dark]) {
   --pico-background-color: #fff;
+  --pico-header-background-color: rgba(255, 255, 255, 0.95);
   --pico-color: #373c44;
   --pico-border-color: #ccc;
   --pico-text-selection-color: rgba(116, 139, 248, 0.25);
@@ -348,6 +350,7 @@ details summary[role=button]:not(.outline)::after {
 @media only screen and (prefers-color-scheme: dark) {
   :root:not([data-theme]) {
     --pico-background-color: #13171f;
+    --pico-header-background-color: rgba(20, 20, 20, 0.95);
     --pico-color: #c2c7d0;
     --pico-border-color: #747272;
     --pico-text-selection-color: rgba(137, 153, 249, 0.1875);
@@ -472,6 +475,7 @@ details summary[role=button]:not(.outline)::after {
 }
 [data-theme=dark] {
   --pico-background-color: #13171f;
+  --pico-header-background-color: rgba(20, 20, 20, 0.815);
   --pico-color: #c2c7d0;
   --pico-border-color: #727272;
   --pico-text-selection-color: rgba(137, 153, 249, 0.1875);
@@ -652,8 +656,13 @@ main {
 body > header,
 body > main,
 body > footer {
-  padding-block: var(--pico-block-spacing-vertical);
+  /* padding-block: var(--pico-block-spacing-vertical); */
 }
+
+body > header {
+  border-bottom: 2px solid #888888; /* Adjust the color and thickness of the border as needed */
+}
+
 
 /**
  * Section
@@ -2469,14 +2478,14 @@ nav ul {
   padding: 0;
   list-style: none;
 }
-nav ol:first-of-type,
+/* nav ol:first-of-type,
 nav ul:first-of-type {
   margin-left: calc(var(--pico-nav-element-spacing-horizontal) * -1);
-}
-nav ol:last-of-type,
+} */
+/* nav ol:last-of-type,
 nav ul:last-of-type {
   margin-right: calc(var(--pico-nav-element-spacing-horizontal) * -1);
-}
+} */
 nav li {
   display: inline-block;
   margin: 0;
@@ -2854,8 +2863,12 @@ h3 {
 table,.center_article {
     max-width: 1000px;
     margin: auto;
-
     margin-top: 20px;
+}
+
+.center_article-border{
+  border: 1px solid var(--pico-border-color);
+  border-radius: 4px;
 }
 
 .center_article h2,
@@ -3089,3 +3102,176 @@ word-break: break-all;
   text-align: justify;
   font-size: 1rem;
 }
+
+
+/* Add styles for dark mode toggle button */
+.dark-mode-toggle {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+}
+
+.dark-mode-toggle:hover {
+    color: #666;
+}
+
+/* Ensure the toggle button group is in one line */
+.navbar-controls {
+    display: flex;
+    align-items: center;
+}
+
+/* Ensure dark mode toggle button and toggle button are aligned properly */
+.navbar-controls .navbar-toggle {
+    margin-left: auto;
+}
+
+/* Rest of your existing CSS styles */
+
+
+
+/* Mobile Styles */
+.navbar-toggle {
+  display: block;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.navbar-toggle span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: var(--pico-color);
+  margin: 5px 0;
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar-toggle span:nth-child(1) {
+  transform-origin: left center;
+}
+
+.navbar-toggle span:nth-child(3) {
+  transform-origin: left center;
+}
+
+
+.navbar-links {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--pico-header-background-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar-links.show {
+  transform: translateY(0);
+}
+
+.navbar-links li {
+  display: block;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.navbar-links li a {
+  /* color: #333; */
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar-links li a:hover {
+  color: #666;
+}
+
+.close-btn {
+  position: absolute;
+  top: 0rem;
+  right: 1rem;
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+
+/* Desktop Styles */
+@media (min-width: 768px) {
+  .navbar-toggle {
+    display: none;
+  }
+
+  .navbar-links {
+    position: static;
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    transform: none;
+    transition: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .navbar-links li {
+    display: inline-block;
+    text-align: left;
+    margin: 0 0 0 1rem;
+  }
+
+  .navbar-links li a {
+    font-size: 1rem;
+  }
+
+  .close-btn {
+    display: none;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.month-year-padding {
+  padding: 0.5rem;
+}
+
+
+.dark-mode-toggle img {
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+}
+
+/* Add margin to the right of the toggle image on large screens */
+@media (min-width: 768px) {
+  .dark-mode-toggle img {
+    margin-right: 40px; /* Adjust the margin as needed */
+  }
+
+  nav ul {
+    padding-left: 20px;
+  }
+}
+

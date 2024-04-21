@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap>
+    <loc>https://how-old-am-i.online/sitemap_years.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://how-old-am-i.online/sitemap_months.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://how-old-am-i.online/sitemap_dates.xml</loc>
+  </sitemap>
+</sitemapindex>
