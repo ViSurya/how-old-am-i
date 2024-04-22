@@ -7,9 +7,9 @@ const allowedDomains = ['127.0.0.1', 'localhost', 'how-old-am-i.online'];
 // Check if the current domain is allowed
 const isAllowed = allowedDomains.some(domain => currentDomain === domain || currentDomain.endsWith(`.${domain}`));
 
-// If the current domain is not allowed, redirect to https://how-old-am-i.online/
+// If the current domain is not allowed, redirect to https://easycalculator.net/
 if (!isAllowed) {
-  window.location.href = 'https://how-old-am-i.online/';
+  window.location.href = 'https://easycalculator.net/';
 }
 
 
