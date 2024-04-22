@@ -3275,3 +3275,7 @@ word-break: break-all;
   }
 }
 
+.counter {
+  font-size: larger;
+  font-weight: 500;
+}
