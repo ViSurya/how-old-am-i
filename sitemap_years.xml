@@ -50,7 +50,7 @@
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
-  <!-- <url>
+  <url>
     <loc>https://how-old-am-i.online/?birthdate=2013</loc>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
@@ -369,5 +369,5 @@
     <loc>https://how-old-am-i.online/?birthdate=1950</loc>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
-  </url> -->
+  </url>
 </urlset>
