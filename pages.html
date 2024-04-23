@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="robots" content="noindex, nofollow">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pages - How old Am I</title>
+    <link rel="stylesheet" href="/static/styles/app.css">
+</head>
+<body style="padding: 20px;">
+    <header>
+        <nav class="container-fluid">
+          <ul class="logo">
+            <li><a href="/"><strong>How old am I</strong></a></li>
+          </ul>
+          <ul class="navbar-links">
+            <li><a href="/sitemap.xml" class="contrast">Site Map</a></li>
+            <li><a href="/pages#about" class="contrast">About US</a></li>
+            <li><a href="/pages#privacy-policy" class="contrast">Privacy Policy</a></li>
+            <li><a href="/pages#disclaimer" class="contrast">Disclaimer</a></li>
+            <li><span class="close-btn" onclick="toggleMenu()">&times;</span></li>
+          </ul>
+          <div class="navbar-controls">
+            <div class="dark-mode-toggle" onclick="toggleDarkMode()">
+              <img id="sunIcon" src="./static/images/sun.svg" alt="light mode sun svg" style="display: none;">
+              <img id="moonIcon" src="./static/images/moon.svg" alt="light mode moon svg" style="display: none;">
+            </div>
+            <span class="navbar-toggle" onclick="toggleMenu()">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+          </div>
+        </nav>
+      </header>
+    <main class="container" style="margin: auto;">
+        <article id="root">
+
+        </article>
+    </main>
+<script src="./pages.js"></script>
+</body>
+</html>

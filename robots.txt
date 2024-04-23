@@ -2,3 +2,8 @@ User-agent: *
 Allow: /
 
 Sitemap: https://how-old-am-i.online/sitemap.xml
+
+# Disallow crawling of specific pages
+Disallow: /pages#about
+Disallow: /pages#privacy-policy
+Disallow: /pages#disclaimer
