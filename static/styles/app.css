@@ -2924,16 +2924,31 @@ table,.center_article {
   padding-inline-start: 10px; /* Adjust this value as needed */
 }
 
-.monthTableHeading {
+.monthTableHeading, .monthTableDataLink {
   text-decoration: none; /* Remove underline */
-  font-weight: bold; /* Make the text bold */
+  /* font-weight: bold; Make the text bold */
   /* Add any other styles you want */
 }
-
-.monthTableHeading:hover {
-  color: rgb(238, 62, 39); /* Change color on hover */
-  /* Add any other styles for hover state */
+.monthTableHeading th {
+  text-align: justify !important;
 }
+
+.monthTableHeading {
+  text-decoration: none;
+  border: 2px solid transparent; /* Transparent border initially */
+  transition: border-color 0.3s ease; /* Smooth transition for border color */
+
+}
+
+.monthTableHeading:hover,
+.monthTableHeading:focus {
+  border-bottom-color: #2060df; /* Premium hover and focus border color */
+}
+
+.monthTableHeading:focus {
+  outline: none;
+}
+
 
 .line {
   display: block;

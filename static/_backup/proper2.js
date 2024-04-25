@@ -2848,7 +2848,7 @@ function handleYearDate(year, currentTime) {
       const totalSeconds = Math.floor((currentDate - birthDate) / 1000);
 
       const formattedBirthdateDisplay = birthDate.toLocaleDateString('en-US', {
-        weekday: 'long',
+        weekday: 'short',
         day: 'numeric',
         month: 'long',
         year: 'numeric',
@@ -2875,7 +2875,7 @@ function handleYearDate(year, currentTime) {
 
       tableHTML += `
         <tr>
-          <th><a href="${url}?birthdate=${formattedBirthdate}">${formattedBirthdateDisplay}</a></th>
+          <th><a class="monthTableDataLink" href="${url}?birthdate=${formattedBirthdate}">${formattedBirthdateDisplay}</a></th>
           <td><b>${ageCalculatedYears} Years, ${ageCalculatedMonths} Months, ${ageCalculatedDays} Days</b>
             <br>
             <small>or <b>${totalMonths}</b> months, or <b>${totalWeeks}</b> weeks, or <b>${totalDays}</b> days, or <b>${totalHours}</b> hours, or <b>${totalMinutes}</b> minutes, or <b>${totalSeconds}</b> seconds</small>
@@ -3011,7 +3011,7 @@ function handleYearMonthDate(birthYear, birthMonth, currentTime) {
     const zodiacData = getZodiacSign(birthDate);
 
     result[monthName][j] = {
-      birthdate: `<a href="${baseUrl}?birthdate=${formattedDate}">${birthDate.toLocaleDateString('en-US', {
+      birthdate: `<a  class="monthTableHeading" href="${baseUrl}?birthdate=${formattedDate}">${birthDate.toLocaleDateString('en-US', {
         weekday: 'long',
         day: 'numeric',
         month: 'long',
