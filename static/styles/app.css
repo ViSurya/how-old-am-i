@@ -81,7 +81,7 @@ a.secondary, a.contrast {
 }
 
 small {
-  --pico-font-size: 0.875em;
+  font-size: 0.75em;
 }
 
 h1,
